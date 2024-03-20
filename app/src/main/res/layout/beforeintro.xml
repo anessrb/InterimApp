@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="179dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ellipse2" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="96dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView11"
+        app:layout_constraintEnd_toEndOf="@+id/imageView9"
+        app:srcCompat="@drawable/ellipseautresens1" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="302dp"
+        android:layout_height="315dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/salypng" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="247dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="52dp"
+        android:fontFamily="@font/gothic_a1_extrabold"
+        android:text="FIND YOUR DREAM JOB"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="217dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="64dp"
+        android:backgroundTint="#6E00B0FF"
+        android:text="GET STARTED"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
