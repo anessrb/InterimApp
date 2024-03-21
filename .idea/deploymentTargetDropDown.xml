@@ -11,6 +11,9 @@
       <entry key="intro3">
         <State />
       </entry>
+      <entry key="login">
+        <State />
+      </entry>
     </value>
   </component>
 </project>
