@@ -18,7 +18,7 @@ public class beforeintro extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), beforeintro.class);
+                Intent intent = new Intent(view.getContext(), login.class);
                 view.getContext().startActivity(intent);}
         });
     }

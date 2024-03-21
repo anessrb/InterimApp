@@ -25,13 +25,18 @@
         android:layout_marginStart="72dp"
         android:layout_marginTop="36dp"
         android:textColorHint="#6E00B0FF"
+        app:boxCornerRadiusBottomEnd="10sp"
+        app:boxCornerRadiusBottomStart="10sp"
+        app:boxCornerRadiusTopEnd="10sp"
+        app:boxCornerRadiusTopStart="10sp"
+        app:boxStrokeColor="#6E00B0FF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/emailTextInputEditText"
             android:layout_width="260dp"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:fontFamily="@font/gothic_a1_semibold"
             android:hint="Email" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -62,28 +67,34 @@
         app:srcCompat="@drawable/salypng" />
 
 
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
         android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
         android:textColorHint="#6E00B0FF"
+        app:boxCornerRadiusBottomEnd="10sp"
+        app:boxCornerRadiusBottomStart="10sp"
+        app:boxCornerRadiusTopEnd="10sp"
+        app:boxCornerRadiusTopStart="10sp"
+        app:boxStrokeColor="#6E00BCD4"
         app:layout_constraintStart_toStartOf="@+id/emailTextInputLayout"
         app:layout_constraintTop_toBottomOf="@+id/emailTextInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="260dp"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:fontFamily="@font/gothic_a1_semibold"
-            android:hint="Password" />
+            android:hint="Password"
+            android:textColorHint="#00B0FF"
+            android:textColorLink="#00B0FF" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/createAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/gothic_a1_extrabold"
         android:text="Create an account"
         android:textColor="#6E00B0FF"
