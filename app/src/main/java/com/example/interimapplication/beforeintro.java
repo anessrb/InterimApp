@@ -1,7 +1,6 @@
 package com.example.interimapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,12 +13,25 @@ public class beforeintro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.beforeintro);
 
-        Button button1 = findViewById(R.id.nextButton);
-        button1.setOnClickListener(new View.OnClickListener() {
+        Button anonymousButton = findViewById(R.id.Anonymous);
+        Button loginButton = findViewById(R.id.Loginpage);
+
+        anonymousButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), login.class);
-                view.getContext().startActivity(intent);}
+                // Intent pour démarrer MainActivity
+                Intent intent = new Intent(beforeintro.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Intent pour démarrer LoginActivity
+                Intent intent = new Intent(beforeintro.this, LoginActivity.class);
+                startActivity(intent);
+            }
         });
     }
 }

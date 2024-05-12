@@ -36,23 +36,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:srcCompat="@drawable/rectangle1" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="231dp"
-        android:layout_height="175dp"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="188dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/undraw_job_offers_re_634p" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="363dp"
         android:layout_height="63dp"
         android:layout_marginStart="50dp"
         android:layout_marginTop="449dp"
-        android:fontFamily="@font/gothic_a1_extrabold"
+        android:fontFamily="@font/poppins_semibold"
         android:text="Make cover letters and resume to apply to your favorite job"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,12 +50,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/nextButton"
+        android:id="@+id/sendOffer"
         android:layout_width="217dp"
         android:layout_height="49dp"
         android:layout_marginStart="96dp"
         android:layout_marginTop="39dp"
         android:backgroundTint="#6E00B0FF"
+        android:fontFamily="@font/poppins_medium"
         android:text="Next"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView7" />
@@ -74,8 +65,6 @@
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ellipse1" />
 
@@ -86,5 +75,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ellipse2" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/salydrapuea" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

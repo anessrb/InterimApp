@@ -1,6 +1,261 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5FDFF">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordlayout"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="635dp"
+            android:textColorHint="#6E00B0FF"
+            app:boxCornerRadiusBottomEnd="10sp"
+            app:boxCornerRadiusBottomStart="10sp"
+            app:boxCornerRadiusTopEnd="10sp"
+            app:boxCornerRadiusTopStart="10sp"
+            app:boxStrokeColor="#6E00B0FF"
+            app:boxStrokeWidth="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:hint="Password"
+                android:password="true"
+                tools:layout_editor_absoluteX="71dp"
+                tools:layout_editor_absoluteY="182dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/websitelayout"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="558dp"
+            android:textColorHint="#6E00B0FF"
+            app:boxCornerRadiusBottomEnd="10sp"
+            app:boxCornerRadiusBottomStart="10sp"
+            app:boxCornerRadiusTopEnd="10sp"
+            app:boxCornerRadiusTopStart="10sp"
+            app:boxStrokeColor="#00B0FF"
+            app:boxStrokeWidth="1dp"
+            app:hintTextColor="#00B0FF"
+            app:layout_constraintEnd_toEndOf="@id/passwordlayout"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/website"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:hint="Website"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="327dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nationalnumlayout"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="177dp"
+            android:textColorHint="#6E00B0FF"
+            app:boxCornerRadiusBottomEnd="10sp"
+            app:boxCornerRadiusBottomStart="10sp"
+            app:boxCornerRadiusTopEnd="10sp"
+            app:boxCornerRadiusTopStart="10sp"
+            app:boxStrokeColor="#6E00BCD4"
+            app:layout_constraintStart_toStartOf="@+id/passwordlayout"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nationalnum"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:hint="National Registration Num"
+                android:textColorHint="#00B0FF"
+                android:textColorLink="#00B0FF"
+                tools:layout_editor_absoluteX="80dp"
+                tools:layout_editor_absoluteY="235dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/contactmaillayout"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="329dp"
+            android:textColorHint="#6E00B0FF"
+            app:boxCornerRadiusBottomEnd="10sp"
+            app:boxCornerRadiusBottomStart="10sp"
+            app:boxCornerRadiusTopEnd="10sp"
+            app:boxCornerRadiusTopStart="10sp"
+            app:boxStrokeColor="#00B0FF"
+            app:boxStrokeWidth="1dp"
+            app:hintTextColor="#00B0FF"
+            app:layout_constraintEnd_toEndOf="@id/passwordlayout"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/contactmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:hint="Contact mail"
+                tools:layout_editor_absoluteX="97dp"
+                tools:layout_editor_absoluteY="253dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="124dp"
+            android:layout_marginTop="36dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Create account"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/sendOffer"
+            android:layout_width="217dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="741dp"
+            android:backgroundTint="#6E00B0FF"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Create account"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/companyadresslayout"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="482dp"
+            android:textColorHint="#6E00B0FF"
+            app:boxCornerRadiusBottomEnd="10sp"
+            app:boxCornerRadiusBottomStart="10sp"
+            app:boxCornerRadiusTopEnd="10sp"
+            app:boxCornerRadiusTopStart="10sp"
+            app:boxStrokeColor="#00B0FF"
+            app:boxStrokeWidth="1dp"
+            app:hintTextColor="#00B0FF"
+            app:layout_constraintEnd_toEndOf="@id/passwordlayout"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/companyadress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:hint="Company Adress"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="327dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/contactnamelayout"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="253dp"
+            android:textColorHint="#6E00B0FF"
+            app:boxCornerRadiusBottomEnd="10sp"
+            app:boxCornerRadiusBottomStart="10sp"
+            app:boxCornerRadiusTopEnd="10sp"
+            app:boxCornerRadiusTopStart="10sp"
+            app:boxStrokeColor="#00B0FF"
+            app:boxStrokeWidth="1dp"
+            app:hintTextColor="#00B0FF"
+            app:layout_constraintEnd_toEndOf="@id/passwordlayout"
+            app:layout_constraintStart_toStartOf="@id/passwordlayout"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/contactname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:hint="Contact name"
+                tools:layout_editor_absoluteX="62dp"
+                tools:layout_editor_absoluteY="546dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/contactnumberlayout"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="406dp"
+            android:textColorHint="#6E00B0FF"
+            app:boxCornerRadiusBottomEnd="10sp"
+            app:boxCornerRadiusBottomStart="10sp"
+            app:boxCornerRadiusTopEnd="10sp"
+            app:boxCornerRadiusTopStart="10sp"
+            app:boxStrokeColor="#00B0FF"
+            app:boxStrokeWidth="1dp"
+            app:hintTextColor="#00B0FF"
+            app:layout_constraintEnd_toEndOf="@id/passwordlayout"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/contactnumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:hint="Contact number"
+                tools:layout_editor_absoluteX="97dp"
+                tools:layout_editor_absoluteY="253dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/companynamelayout"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="100dp"
+            android:textColorHint="#6E00B0FF"
+            app:boxCornerRadiusBottomEnd="10sp"
+            app:boxCornerRadiusBottomStart="10sp"
+            app:boxCornerRadiusTopEnd="10sp"
+            app:boxCornerRadiusTopStart="10sp"
+
+            app:boxStrokeColor="#6E00B0FF"
+            app:boxStrokeWidth="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/companyname"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:hint="Company name"
+                tools:layout_editor_absoluteX="71dp"
+                tools:layout_editor_absoluteY="182dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

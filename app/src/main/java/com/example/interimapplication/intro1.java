@@ -15,7 +15,7 @@ public class intro1 extends AppCompatActivity {
         setContentView(R.layout.intro1);
 
 
-        Button button1 = findViewById(R.id.nextButton);
+        Button button1 = findViewById(R.id.sendOffer);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "682392842197",
+    "project_id": "interimapp-e48dc",
+    "storage_bucket": "interimapp-e48dc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:682392842197:android:e3a4374eb559252cc7175c",
+        "android_client_info": {
+          "package_name": "com.example.interimapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBB9pZUUInSQkMpkBDUI3UPftXqg5UoAWk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

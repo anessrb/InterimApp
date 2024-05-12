@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <corners android:radius="8dp" />
+    <stroke android:width="2dp"
+        android:color="#6E00B0FF"/>
+    <solid android:color="#6E00B0FF" />
+
+
+</shape>

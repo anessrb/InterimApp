@@ -1,6 +1,253 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="40dp"
+    android:layout_marginTop="95dp"
+    android:layout_marginRight="14sp"
+    android:animateLayoutChanges="false"
+    android:background="@drawable/offer_bg"
+    android:clickable="true"
+    android:focusable="true">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/image_offers_iv"
+        android:layout_width="32sp"
+        android:layout_height="32sp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="3dp"
+        android:src="@drawable/apple"
+        app:circularflow_angles="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nomCompagnie_offers_tv"
+        android:layout_width="117sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:paddingLeft="3sp"
+        android:text="Apple"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titre_offers_tv"
+        android:layout_width="120sp"
+        android:layout_height="23sp"
+        android:layout_marginStart="173dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center_vertical"
+        android:paddingLeft="3sp"
+        android:text="Data analyst"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/condidate_name_offers_tv"
+        android:layout_width="105sp"
+        android:layout_height="12dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="47dp"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingLeft="2dp"
+        android:text="Candidate name:"
+        android:textSize="11dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sex_offers_tv"
+        android:layout_width="105sp"
+        android:layout_height="12dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="77dp"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingLeft="2dp"
+        android:text="Sex:"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/number_offers_tv"
+        android:layout_width="105sp"
+        android:layout_height="12sp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="62dp"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingLeft="2dp"
+        android:text="Number:"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/last_degree_offers_tv"
+        android:layout_width="105sp"
+        android:layout_height="14sp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="93dp"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingLeft="2dp"
+        android:text="Last degree:"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/adress_offers_tv"
+        android:layout_width="105sp"
+        android:layout_height="12sp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="109dp"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingLeft="2dp"
+        android:text="Adress:"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/age_offers_tv"
+        android:layout_width="105sp"
+        android:layout_height="14sp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="124dp"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingLeft="2dp"
+        android:text="Age:"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/condidate_name_offers_value_tv"
+        android:layout_width="105sp"
+        android:layout_height="12dp"
+        android:layout_marginStart="122dp"
+        android:layout_marginTop="47dp"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingLeft="2dp"
+        android:text="Abdelhak Seriai"
+        android:textColor="#6E00B0FF"
+        android:textSize="11dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sex_offers_value_tv"
+        android:layout_width="105sp"
+        android:layout_height="12dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="77dp"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingLeft="2dp"
+        android:text="Male"
+        android:textColor="#6E00B0FF"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/number_offers_value_tv"
+        android:layout_width="105sp"
+        android:layout_height="12sp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="62dp"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingLeft="2dp"
+        android:text="+33 7 60 28 59 98"
+        android:textColor="#6E00B0FF"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/last_degree_offers_value_tv"
+        android:layout_width="105sp"
+        android:layout_height="14sp"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="93dp"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingLeft="2dp"
+        android:text="Master"
+        android:textColor="#6E00B0FF"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/adress_offers_value_tv"
+        android:layout_width="155sp"
+        android:layout_height="12sp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="109dp"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingLeft="2dp"
+        android:text="3 Av. Triolet, Montpellier"
+        android:textColor="#6E00B0FF"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/age_offers_value_tv"
+        android:layout_width="105sp"
+        android:layout_height="14sp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="124dp"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingLeft="2dp"
+        android:text="29"
+        android:textColor="#6E00B0FF"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/accept_offers"
+        android:layout_width="76sp"
+        android:layout_height="26sp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="155dp"
+        android:backgroundTint="@color/green"
+        android:padding="0dp"
+        android:text="Accept"
+        android:textColor="@color/white"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/decline_offers"
+        android:layout_width="76sp"
+        android:layout_height="26sp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="155dp"
+        android:backgroundTint="@color/red"
+        android:padding="0dp"
+        android:text="Decline"
+        android:textColor="@color/white"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/contact_offers"
+        android:layout_width="76sp"
+        android:layout_height="26sp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="155dp"
+        android:backgroundTint="@color/grey"
+        android:padding="0dp"
+        android:text="Contact"
+        android:textColor="@color/white"
+        android:textSize="10sp" />
+
+
+</RelativeLayout>

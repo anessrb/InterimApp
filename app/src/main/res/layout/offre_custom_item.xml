@@ -1,6 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="332dp"
+    android:layout_height="150dp"
+    android:layout_marginLeft="40dp"
+    android:layout_marginTop="95dp"
+    android:layout_marginRight="14sp"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/offer_bg"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/image_iv"
+        android:layout_width="38dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/apple"
+        app:circularflow_angles="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titre_tv"
+        android:layout_width="261dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="11dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:paddingLeft="3sp"
+        android:text="titre"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nomCompagnie_tv"
+        android:layout_width="242dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingLeft="2dp"
+        android:text="nom de la compagnie"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lieu_tv"
+        android:layout_width="226dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="62dp"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingLeft="2dp"
+        android:text="lieu"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/salaire_tv"
+        android:layout_width="75sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/salaire_duree_temps_bg"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:text="salaire"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lieu_tv" />
+
+    <TextView
+        android:id="@+id/temps_tv"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/salaire_duree_temps_bg"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:text="temps"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lieu_tv" />
+
+    <TextView
+        android:id="@+id/duree_tv"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/salaire_duree_temps_bg"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:text="durée"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lieu_tv" />
+
+    <ImageView
+        android:id="@+id/lieu_iv"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/image376"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/nomCompagnie_iv"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="64dp"
+        android:src="@drawable/image377"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

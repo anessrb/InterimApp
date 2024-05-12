@@ -14,11 +14,11 @@ public class intro3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.intro3);
 
-        Button button1 = findViewById(R.id.nextButton);
+        Button button1 = findViewById(R.id.sendOffer);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), beforeintro.class);
+                Intent intent = new Intent(view.getContext(), PositionActivity.class);
                 view.getContext().startActivity(intent);}
         });
     }
