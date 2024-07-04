@@ -43,7 +43,7 @@ Welcome to the Job Application Management Mobile App repository! This app is des
    - View applicant details and CV.
 
 ## Technology Stack
-
+- **Java:**
 - **Figma:** Used for creating design mockups and UI/UX design.
 - **Firebase:** Used for backend services, including authentication, database management, and storage.
 
@@ -75,22 +75,8 @@ Welcome to the Job Application Management Mobile App repository! This app is des
    - Post new job offers and manage existing ones.
    - View and manage applications for your job postings.
 
-## Contributing
 
-We welcome contributions to improve this project! Please fork the repository and submit pull requests.
-
-## License
-
-This project is licensed under the MIT License.
-
-## Contact
-
-For any inquiries or issues, please contact [your email].
 
 ## Video Demonstration
 
-For a video demonstration of the application, please visit our [YouTube channel](https://www.youtube.com/channel/UCxWL6jIH-6l-22Eo4TV6pGA).
-
----
-
-Thank you for visiting our repository and contributing to the Job Application Management Mobile App!
+For a video demonstration of the application, please visit our [YouTube channel](https://youtu.be/bI3Uye5aKjQ?si=JGKa4XLrI58WB7Ah).
