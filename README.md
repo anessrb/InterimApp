@@ -50,16 +50,16 @@ Welcome to the Job Application Management Mobile App repository! This app is des
 ## Screenshots
 
 ### Introduction
-![Introduction](ScreenshotsApplication/intro1.png)
+<img src="ScreenshotsApplication/intro1.png" alt="Introduction" width="300"/>
 
 ### Home Page
-![Job Search](ScreenshotsApplication/home1.png)
+<img src="ScreenshotsApplication/home1.png" alt="Job Search" width="300"/>
 
 ### Job Description
-![Job Description](ScreenshotsApplication/descritpion.png)
+<img src="ScreenshotsApplication/descritpion.png" alt="Job Description" width="300"/>
 
 ### Applicant Management
-![View Applicants](ScreenshotsApplication/appliers1.png)
+<img src="ScreenshotsApplication/appliers1.png" alt="View Applicants" width="300"/>
 
 ## Usage
 
@@ -89,7 +89,7 @@ For any inquiries or issues, please contact [your email].
 
 ## Video Demonstration
 
-For a video demonstration of the application, please visit our [YouTube channel](https://youtu.be/bI3Uye5aKjQ?si=JGKa4XLrI58WB7Ah).
+For a video demonstration of the application, please visit our [YouTube channel](https://www.youtube.com/channel/UCxWL6jIH-6l-22Eo4TV6pGA).
 
 ---
 
