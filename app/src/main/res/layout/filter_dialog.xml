@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#F5FDFF"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filters"
+        android:textSize="25dp"
+        android:textColor="#00B0FF"
+        android:fontFamily="@font/poppins_bold"
+        android:paddingBottom="16dp" />
+
+    <EditText
+        android:id="@+id/editTextCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="City"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#000000"
+        android:fontFamily="@font/poppins_medium" />
+
+    <EditText
+        android:id="@+id/editTextDuration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Duration"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#000000"
+        android:fontFamily="@font/poppins_medium" />
+
+    <EditText
+        android:id="@+id/editTextSalary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Salary"
+        android:padding="10dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="#000000"
+        android:fontFamily="@font/poppins_medium" />
+
+    <Button
+        android:id="@+id/buttonApplyFilters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Apply Filters"
+        android:backgroundTint="#6E00B0FF"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

@@ -1,16 +1,19 @@
 package com.example.interimapplication;
 
-import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.Firebase;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -27,22 +30,24 @@ public class RecyclerViewManageAdapter extends RecyclerView.Adapter<RecyclerView
     private DatabaseReference appRef =FirebaseDatabase.getInstance("https://interimapp-e48dc-default-rtdb.europe-west1.firebasedatabase.app/").getReference().child("applications");
     ArrayList<Application> applications = new ArrayList<>();
     RecycleViewOnItemClick recycleViewOnItemClick;
-    public RecyclerViewManageAdapter(ArrayList<Application> applications, RecycleViewOnItemClick recycleViewOnItemClick) {
+    private Context context;
+
+    public RecyclerViewManageAdapter(ArrayList<Application> applications, RecycleViewOnItemClick recycleViewOnItemClick, Context context) {
         this.applications = applications;
         this.recycleViewOnItemClick = recycleViewOnItemClick;
+        this.context = context;
     }
 
     @NonNull
     @Override
     public ManageViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.manage_offer_custom_item, null, false);
-        RecyclerViewManageAdapter.ManageViewHolder vh = new RecyclerViewManageAdapter.ManageViewHolder(v);
-        return vh;
+        return new ManageViewHolder(v);
     }
 
 
     @Override
-    public void onBindViewHolder(@NonNull ManageViewHolder holder, @SuppressLint("RecyclerView") int position) {
+    public void onBindViewHolder(@NonNull ManageViewHolder holder, int position) {
 
         Application application = applications.get(position);
         holder.titre_tv.setText(application.getTitre());
@@ -66,20 +71,20 @@ public class RecyclerViewManageAdapter extends RecyclerView.Adapter<RecyclerView
             }
         });
 
-        holder.accept.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                appRef.child(applications.get(position).getId()).child("statut").setValue("Accepted");
-            }
+        holder.accept.setOnClickListener(v -> {
+            appRef.child(applications.get(position).getId()).child("statut").setValue("Accepted");
+        appRef.child(applications.get(position).getId()).child("seen").setValue("true");
         });
 
-        holder.decline.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                appRef.child(applications.get(position).getId()).child("statut").setValue("Declined");
-            }
+        holder.decline.setOnClickListener(v -> {
+            appRef.child(applications.get(position).getId()).child("statut").setValue("Declined");
+            appRef.child(applications.get(position).getId()).child("seen").setValue("true");
         });
 
+        holder.contact.setOnClickListener(v -> {
+            Intent intent = new Intent(context, ContactActivity.class);
+            context.startActivity(intent);
+        });
     }
 
     @Override
@@ -87,7 +92,7 @@ public class RecyclerViewManageAdapter extends RecyclerView.Adapter<RecyclerView
         return applications.size();
     }
 
-    class ManageViewHolder extends RecyclerView.ViewHolder{
+    class ManageViewHolder extends RecyclerView.ViewHolder {
         ImageView image_iv;
         TextView titre_tv;
         TextView nomCompagnie_tv;
@@ -100,6 +105,7 @@ public class RecyclerViewManageAdapter extends RecyclerView.Adapter<RecyclerView
         Button accept;
         Button decline;
         Button contact;
+
         public ManageViewHolder(@NonNull View itemView) {
             super(itemView);
             image_iv = itemView.findViewById(R.id.image_offers_iv);
@@ -114,18 +120,10 @@ public class RecyclerViewManageAdapter extends RecyclerView.Adapter<RecyclerView
             accept = itemView.findViewById(R.id.accept_offers);
             decline = itemView.findViewById(R.id.decline_offers);
             contact = itemView.findViewById(R.id.contact_offers);
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    recycleViewOnItemClick.onItemClick(getAdapterPosition());
-                }
-            });
-            itemView.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View v) {
-                    recycleViewOnItemClick.onLongItemClick(getAdapterPosition());
-                    return true;
-                }
+            itemView.setOnClickListener(v -> recycleViewOnItemClick.onItemClick(getAdapterPosition()));
+            itemView.setOnLongClickListener(v -> {
+                recycleViewOnItemClick.onLongItemClick(getAdapterPosition());
+                return true;
             });
         }
     }

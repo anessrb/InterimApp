@@ -10,7 +10,7 @@ public class Application {
     private String companyId;
     private String offerId;
     private String id;
-    private boolean seen;
+    private String seen;
 
     public Application(){}
 
@@ -24,14 +24,14 @@ public class Application {
         this.companyId = companyId;
         this.id = id;
         this.offerId=offerId;
-        this.seen = false;
+        this.seen = "false";
     }
 
-    public boolean isSeen() {
+    public String isSeen() {
         return seen;
     }
 
-    public void setSeen(boolean seen) {
+    public void setSeen(String seen) {
         this.seen = seen;
     }
 

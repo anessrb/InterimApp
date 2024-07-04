@@ -57,6 +57,7 @@
         android:id="@+id/verificationcodeTIL"
         android:layout_width="145dp"
         android:layout_height="57dp"
+        android:layout_marginTop="589dp"
         app:boxBackgroundColor="#FFFFFF"
         app:boxCornerRadiusBottomEnd="30sp"
         app:boxCornerRadiusBottomStart="30sp"
@@ -65,12 +66,14 @@
         app:boxStrokeWidth="1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="589dp">
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/verificationcode"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button

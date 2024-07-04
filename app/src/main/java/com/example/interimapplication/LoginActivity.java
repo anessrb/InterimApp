@@ -83,10 +83,10 @@ public class LoginActivity extends AppCompatActivity {
                                     // Password correct, login as a user
                                     Toast.makeText(LoginActivity.this, "User login successful!", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                                    intent.putExtra("id", user.getId());
+                                    intent.putExtra("id", user.getUserid());
                                     intent.putExtra("type", "user");
                                     startActivity(intent);
-                                    finish();
+                                    //finish();
                                     return;
                                 }
                             }

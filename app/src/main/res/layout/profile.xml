@@ -9,39 +9,34 @@
     <TextView
         android:id="@+id/CV"
         android:layout_width="196dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="524dp"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_medium"
         android:text="CV.PDF"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/numberuser"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <TextView
         android:id="@+id/textView401"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="384dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins_medium"
         android:text="Phone number"
         android:textColor="#00B0FF"
         android:textSize="25dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/text404"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
 
     <TextView
         android:id="@+id/numberuser"
         android:layout_width="302dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="424dp"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_medium"
         android:text="09876567890"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/textView401" />
 
     <TextView
         android:id="@+id/text404"
@@ -58,15 +53,14 @@
 
     <TextView
         android:id="@+id/email"
-        android:layout_width="208dp"
+        android:layout_width="409dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
-        android:layout_marginTop="308dp"
         android:fontFamily="@font/poppins_medium"
         android:text="email@email.com"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/text404" />
 
     <Button
         android:id="@+id/Logout"
@@ -86,21 +80,20 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="484dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins_medium"
         android:text="CV"
         android:textColor="#00B0FF"
         android:textSize="25dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/textView401"
+        app:layout_constraintTop_toBottomOf="@+id/numberuser" />
 
     <ImageView
         android:id="@+id/imageView169"
-        android:layout_width="26dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="240dp"
-        android:layout_marginTop="524dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="500dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_plus" />

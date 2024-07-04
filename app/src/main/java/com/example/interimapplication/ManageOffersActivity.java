@@ -3,7 +3,6 @@ package com.example.interimapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
@@ -23,11 +22,12 @@ public class ManageOffersActivity extends AppCompatActivity implements RecycleVi
     ArrayList<ManageOffers> bd = new ArrayList<>();
     RecyclerView rv;
     RecyclerViewOfferAdapter adapter;
-
     FirebaseDatabase database = FirebaseDatabase.getInstance("https://interimapp-e48dc-default-rtdb.europe-west1.firebasedatabase.app/");
     DatabaseReference offersRef = database.getReference("offers");
     DatabaseReference companies = database.getReference("companies");
     String id, companyName;
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.manage_offers);
@@ -38,7 +38,7 @@ public class ManageOffersActivity extends AppCompatActivity implements RecycleVi
         }
 
         rv = findViewById(R.id.rv_manage);
-        adapter = new RecyclerViewOfferAdapter(bd, this);
+        adapter = new RecyclerViewOfferAdapter(bd, this, this, id);
         RecyclerView.LayoutManager lm = new LinearLayoutManager(this);
         rv.setHasFixedSize(true);
         rv.setAdapter(adapter);
@@ -46,42 +46,36 @@ public class ManageOffersActivity extends AppCompatActivity implements RecycleVi
         DecoratorRecycleView itemDecorator = new DecoratorRecycleView(20);
         rv.addItemDecoration(itemDecorator);
 
+        ImageButton home = findViewById(R.id.homeIcon);
+        home.setOnClickListener(v -> {
+            Intent homeIntent = new Intent(ManageOffersActivity.this, ManageOffersActivity.class);
+            homeIntent.putExtra("id", id);
+            startActivity(homeIntent);
+        });
+
         ImageButton plus = findViewById(R.id.plusIcon);
-        plus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ManageOffersActivity.this, AddOfferActivity.class);
-                intent.putExtra("id", id);
-                startActivity(intent);
-            }
+        plus.setOnClickListener(v -> {
+            Intent addOfferIntent = new Intent(ManageOffersActivity.this, AddOfferActivity.class);
+            addOfferIntent.putExtra("id", id);
+            startActivity(addOfferIntent);
         });
 
         ImageButton profileButton = findViewById(R.id.profileIcon);
-
-        profileButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ManageOffersActivity.this, profileCompany.class);
-                intent.putExtra("id", id);
-                startActivity(intent);
-            }
+        profileButton.setOnClickListener(v -> {
+            Intent profileIntent = new Intent(ManageOffersActivity.this, profileCompany.class);
+            profileIntent.putExtra("id", id);
+            startActivity(profileIntent);
         });
 
         ImageButton message = findViewById(R.id.messageIcon);
-
-        message.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ManageOffersActivity.this, OffersActivity.class);
-                intent.putExtra("id", id);
-                startActivity(intent);
-            }
+        message.setOnClickListener(v -> {
+            Intent offersIntent = new Intent(ManageOffersActivity.this, OffersActivity.class);
+            offersIntent.putExtra("id", id);
+            startActivity(offersIntent);
         });
-
     }
 
-
-
+    @Override
     protected void onStart() {
         super.onStart();
 
@@ -93,7 +87,6 @@ public class ManageOffersActivity extends AppCompatActivity implements RecycleVi
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
             }
         });
 
@@ -101,24 +94,22 @@ public class ManageOffersActivity extends AppCompatActivity implements RecycleVi
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 bd.clear();
-                for(DataSnapshot ds : snapshot.getChildren()){
+                for (DataSnapshot ds : snapshot.getChildren()) {
                     ManageOffers o = ds.getValue(ManageOffers.class);
-                    if(o.getNomCompagnie().equals(companyName)){
+                    if (o.getNomCompagnie().equals(companyName)) {
                         bd.add(o);
-                    } else {
-
                     }
                 }
-                adapter.notifyDataSetChanged(); // Notify the adapter of data changes
+                adapter.notifyDataSetChanged();
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                // Handle error
             }
         });
     }
 
+    @Override
     public void onItemClick(int position) {
         Intent intent = new Intent(ManageOffersActivity.this, beforeintro.class);
         startActivity(intent);
@@ -127,6 +118,6 @@ public class ManageOffersActivity extends AppCompatActivity implements RecycleVi
     @Override
     public void onLongItemClick(int position) {
         bd.remove(position);
+        adapter.notifyItemRemoved(position);
     }
-
 }

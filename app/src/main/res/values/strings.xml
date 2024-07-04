@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">InterimApplication</string>
+    <string-array name="application_status">
+        <item>All</item>
+        <item>Accepted</item>
+        <item>Declined</item>
+        <item>Pending</item>
+    </string-array>
 </resources>

@@ -9,7 +9,9 @@ public class User {
     private String phone;
     private String birthdate;
     private String userid;
+    private String cv;
     private int picture;
+    private String picuri;
 
 
     public User() {
@@ -26,6 +28,22 @@ public class User {
         this.birthdate = birthdate;
         this.userid = userid;
         this.picture = picture;
+    }
+
+    public String getPicuri() {
+        return picuri;
+    }
+
+    public void setPicuri(String picuri) {
+        this.picuri = picuri;
+    }
+
+    public String getCv() {
+        return cv;
+    }
+
+    public void setCv(String cv) {
+        this.cv = cv;
     }
 
     public String getUserid() {
@@ -100,7 +118,4 @@ public class User {
         this.birthdate = birthdate;
     }
 
-    public String getId() {
-        return userid;
-    }
 }

@@ -1,19 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="332dp"
-    android:layout_height="wrap_content"
+    android:layout_height="150dp"
     android:layout_marginLeft="40dp"
     android:layout_marginTop="95dp"
     android:layout_marginRight="14sp"
-    android:animateLayoutChanges="false"
+    android:animateLayoutChanges="true"
     android:background="@drawable/offer_bg"
     android:clickable="true"
     android:focusable="true">
 
     <ImageView
-        android:id="@+id/image_manage_iv"
+        android:id="@+id/image_iv"
         android:layout_width="38dp"
         android:layout_height="40dp"
         android:layout_marginStart="10dp"
@@ -24,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/titre_manage_tv"
+        android:id="@+id/titre_tv"
         android:layout_width="261dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
@@ -38,7 +37,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/nomCompagnie_manage_tv"
+        android:id="@+id/nomCompagnie_tv"
         android:layout_width="242dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="68dp"
@@ -51,7 +50,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/lieu_manage_tv"
+        android:id="@+id/lieu_tv"
         android:layout_width="226dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="68dp"
@@ -64,30 +63,28 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/salaire_manage_tv"
+        android:id="@+id/salaire_tv"
         android:layout_width="75sp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="213dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="23dp"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/salaire_duree_temps_bg"
         android:fontFamily="@font/poppins_medium"
         android:gravity="center"
         android:text="salaire"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/lieu_tv" />
 
     <TextView
-        android:id="@+id/temps_manage_tv"
+        android:id="@+id/temps_tv"
         android:layout_width="75dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="127dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginBottom="23dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/salaire_duree_temps_bg"
         android:fontFamily="@font/poppins_medium"
         android:gravity="center"
@@ -95,15 +92,15 @@
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/lieu_tv" />
 
     <TextView
-        android:id="@+id/duree_manage_tv"
+        android:id="@+id/duree_tv"
         android:layout_width="75dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="41dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginBottom="23dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/salaire_duree_temps_bg"
         android:fontFamily="@font/poppins_medium"
         android:gravity="center"
@@ -111,10 +108,10 @@
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/lieu_tv" />
 
     <ImageView
-        android:id="@+id/lieu_manage_iv"
+        android:id="@+id/lieu_iv"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginStart="48dp"
@@ -124,44 +121,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/nomCompagnie_manage_iv"
+        android:id="@+id/nomCompagnie_iv"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginStart="48dp"
         android:layout_marginTop="64dp"
         android:src="@drawable/image377"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/modify_manage_offers"
-        android:layout_width="115dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="136dp"
-        android:layout_marginBottom="10dp"
-        android:backgroundTint="#CCFFBD03"
-        android:fontFamily="@font/poppins_medium"
-        android:padding="0dp"
-        android:text="Modify"
-        android:textColor="@color/white"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/delete_manage_offers"
-        android:layout_width="115sp"
-        android:layout_height="36sp"
-        android:layout_marginStart="168dp"
-        android:layout_marginTop="136dp"
-        android:backgroundTint="#D9E5383B"
-        android:fontFamily="@font/poppins_medium"
-        android:padding="0dp"
-        android:text="Delete"
-        android:textColor="@color/white"
-        android:textSize="10sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

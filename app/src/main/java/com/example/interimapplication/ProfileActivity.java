@@ -17,6 +17,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -28,9 +29,9 @@ import java.io.IOException;
 public class ProfileActivity extends AppCompatActivity {
     FirebaseDatabase database = FirebaseDatabase.getInstance("https://interimapp-e48dc-default-rtdb.europe-west1.firebasedatabase.app/");
     DatabaseReference users = database.getReference("users");
-
     String name, mail, number, id;
     int pic;
+    Uri uri;
     private ImageView imageView;
     private TextView emailTextView, nameTextView, numberTextView;
     private static final int PICK_IMAGE_REQUEST = 1;
@@ -50,6 +51,51 @@ public class ProfileActivity extends AppCompatActivity {
         if (intent != null) {
             id = intent.getStringExtra("id");
         }
+
+        // Set up profile button
+        ImageButton homeButton = findViewById(R.id.homeIcon);
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfileActivity.this, MainActivity.class);
+                intent.putExtra("id", id);
+                startActivity(intent);
+            }
+        });
+
+        // Set up profile button
+        ImageButton profileButton = findViewById(R.id.profileIcon);
+        profileButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfileActivity.this, ProfileActivity.class);
+                intent.putExtra("id", id);
+                startActivity(intent);
+            }
+        });
+
+        // Set up message button
+        ImageButton message = findViewById(R.id.messageIcon);
+        message.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfileActivity.this, MainApplcations.class);
+                intent.putExtra("id", id);
+                startActivity(intent);
+            }
+        });
+
+        // Set up save offers button
+        ImageButton saveIcon = findViewById(R.id.saveIcon);
+        saveIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfileActivity.this, SavedOfferActivity.class);
+                intent.putExtra("id", id);
+                startActivity(intent);
+            }
+        });
+
         users.child(id).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -61,7 +107,17 @@ public class ProfileActivity extends AppCompatActivity {
                 emailTextView.setText(mail);
                 nameTextView.setText(name);
                 numberTextView.setText(number);
-                imageView.setImageResource(pic);
+
+                /*if(snapshot.child("picuri").exists()){
+
+                    String s = snapshot.child("picuri").getValue(String.class);
+                    Uri uri = Uri.parse(s);
+
+                    imageView.setImageURI(uri);
+
+                } else {*/
+                    imageView.setImageResource(pic);
+                //}
 
             }
 
@@ -74,16 +130,6 @@ public class ProfileActivity extends AppCompatActivity {
         ImageView modifyFotoImageView = findViewById(R.id.modifypicture);
         ImageView plusButton = findViewById(R.id.imageView169);
         Button logoutButton = findViewById(R.id.Logout);
-        ImageButton home = findViewById(R.id.homeIcon);
-
-        home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ProfileActivity.this, MainActivity.class);
-                intent.putExtra("id", id);
-                startActivity(intent);
-            }
-        });
 
         logoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,6 +149,7 @@ public class ProfileActivity extends AppCompatActivity {
         plusButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 openDocumentChooser();
             }
         });
@@ -126,20 +173,22 @@ public class ProfileActivity extends AppCompatActivity {
 
         if (resultCode == RESULT_OK && data != null && data.getData() != null) {
             if (requestCode == PICK_IMAGE_REQUEST) {
-                Uri imageUri = data.getData();
-                try {
-                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), imageUri);
-                    imageView.setImageBitmap(bitmap);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                uri = data.getData();
+                String PictureName = getFileName(uri);
+                Toast.makeText(this, "Picture selected: " + PictureName, Toast.LENGTH_SHORT).show();
+                users.child(id).child("picuri").setValue(uri.toString());
+
+                imageView.setImageURI(uri);
+
             } else if (requestCode == PICK_DOCUMENT_REQUEST) {
-                Uri documentUri = data.getData();
-                String documentName = getFileName(documentUri);
+                uri = data.getData();
+                String documentName = getFileName(uri);
                 Toast.makeText(this, "Document selected: " + documentName, Toast.LENGTH_SHORT).show();
+                users.child(id).child("cv").setValue(uri.toString());
             }
         }
     }
+
 
     private String getFileName(Uri uri) {
         String result = null;

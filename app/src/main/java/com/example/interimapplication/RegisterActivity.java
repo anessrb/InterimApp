@@ -48,8 +48,9 @@ public class RegisterActivity extends AppCompatActivity {
 
                 saveUserData(firstName, lastName, email, address, password, phone, birthdate);
 
-                // Après l'enregistrement réussi, ouvrez LoginActivity
-                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                // Après l'enregistrement réussi, ouvrez EmailConfirmationActivity
+                Intent intent = new Intent(RegisterActivity.this, EmailConfirmationActivity.class);
+                intent.putExtra("firstName", firstName);
                 startActivity(intent);
                 finish(); // Facultatif : fermer l'activité actuelle pour empêcher l'utilisateur de revenir à cette page avec le bouton Retour
             }

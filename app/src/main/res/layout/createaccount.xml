@@ -142,6 +142,7 @@
         app:boxCornerRadiusTopEnd="10sp"
         app:boxCornerRadiusTopStart="10sp"
         app:boxStrokeColor="#00B0FF"
+        app:hintTextColor="#00B0FF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/namelayout">
@@ -172,6 +173,7 @@
         app:boxCornerRadiusTopEnd="10sp"
         app:boxCornerRadiusTopStart="10sp"
         app:boxStrokeColor="#00B0FF"
+        app:hintTextColor="#00B0FF"
         app:boxStrokeWidth="1dp"
         app:boxStrokeWidthFocused="1dp"
         app:layout_constraintEnd_toEndOf="parent"

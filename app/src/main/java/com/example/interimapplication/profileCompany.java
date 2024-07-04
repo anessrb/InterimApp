@@ -72,15 +72,33 @@ public class profileCompany extends AppCompatActivity {
 
         Button logoutButton = findViewById(R.id.Logout);
         ImageView modifyFotoImageView = findViewById(R.id.modifypicture);
-        ImageButton home = findViewById(R.id.homeIcon);
 
-        home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(profileCompany.this, ManageOffersActivity.class);
-                intent.putExtra("id", id);
-                startActivity(intent);
-            }
+        ImageButton home = findViewById(R.id.homeIcon);
+        home.setOnClickListener(v -> {
+            Intent homeIntent = new Intent(profileCompany.this, ManageOffersActivity.class);
+            homeIntent.putExtra("id", id);
+            startActivity(homeIntent);
+        });
+
+        ImageButton plus = findViewById(R.id.plusIcon);
+        plus.setOnClickListener(v -> {
+            Intent addOfferIntent = new Intent(profileCompany.this, AddOfferActivity.class);
+            addOfferIntent.putExtra("id", id);
+            startActivity(addOfferIntent);
+        });
+
+        ImageButton profileButton = findViewById(R.id.profileIcon);
+        profileButton.setOnClickListener(v -> {
+            Intent profileIntent = new Intent(profileCompany.this, profileCompany.class);
+            profileIntent.putExtra("id", id);
+            startActivity(profileIntent);
+        });
+
+        ImageButton message = findViewById(R.id.messageIcon);
+        message.setOnClickListener(v -> {
+            Intent offersIntent = new Intent(profileCompany.this, OffersActivity.class);
+            offersIntent.putExtra("id", id);
+            startActivity(offersIntent);
         });
 
         logoutButton.setOnClickListener(new View.OnClickListener() {

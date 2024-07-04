@@ -39,6 +39,12 @@ dependencies {
 
     implementation ("com.google.firebase:firebase-storage:20.0.0")
     implementation ("com.squareup.picasso:picasso:2.71828")
+    implementation ("com.google.android.gms:play-services-maps:18.0.2")
+
+    implementation ("com.github.bumptech.glide:glide:4.12.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
+
+
 
 
     implementation("androidx.appcompat:appcompat:1.6.1")
@@ -52,6 +58,9 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     // Import the BoM for the Firebase platform
     implementation(platform("com.google.firebase:firebase-bom:32.8.0"))
+    implementation ("com.github.bumptech.glide:glide:4.11.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.11.0")
+
 
     // Add the dependency for the Firebase Authentication library
     // When using the BoM, you don't specify versions in Firebase library dependencies

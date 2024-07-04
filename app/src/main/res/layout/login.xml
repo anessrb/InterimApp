@@ -19,6 +19,7 @@
         app:boxCornerRadiusTopEnd="10sp"
         app:boxCornerRadiusTopStart="10sp"
         app:boxStrokeColor="#6E00B0FF"
+        app:hintTextColor="#00B0FF"
         app:boxStrokeWidth="1dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3">
@@ -81,6 +82,7 @@
         app:boxCornerRadiusTopEnd="10sp"
         app:boxCornerRadiusTopStart="10sp"
         app:boxStrokeColor="#6E00BCD4"
+        app:hintTextColor="#00B0FF"
         app:layout_constraintStart_toStartOf="@+id/maillayout"
         app:layout_constraintTop_toBottomOf="@+id/maillayout">
 

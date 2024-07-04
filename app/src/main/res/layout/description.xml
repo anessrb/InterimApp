@@ -6,71 +6,13 @@
     android:layout_height="match_parent"
     android:background="#F5FDFF">
 
-
-    <Button
-        android:id="@+id/apply"
-        android:layout_width="217dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="627dp"
-        android:backgroundTint="#6E00B0FF"
-        android:text="Apply"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView160"
-        android:layout_width="174dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="98dp"
-        android:layout_marginTop="431dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="City"
-        android:textColor="#00B0FF"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView162"
-        android:layout_width="174dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="98dp"
-        android:layout_marginTop="352dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="Duration"
-        android:textColor="#00B0FF"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView184"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="424dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/backgroundsalaire" />
-
-    <ImageView
-        android:id="@+id/imageView183"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/backgroundsalaire" />
-
     <TextView
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/gothic_a1_semibold"
+        android:fontFamily="@font/poppins_bold"
         android:text="Description"
         android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,68 +20,121 @@
 
     <TextView
         android:id="@+id/textView15"
-        android:layout_width="379dp"
-        android:layout_height="177dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="15dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="We are looking for a versatile and visionary Data Scientist who is naturally curious and driven by innovation to join its Data and Transformation team. The successful candidate will be a seasoned professional capable of harnessing complex data, unveiling insights, and weaving stories that drive strategic decision-making  in our Agro-Business, Energy, and Property clusters."
+        android:text="We are looking for a versatile and visionary Data Scientist who is naturally curious and driven by innovation to join its Data and Transformation team. The successful candidate will be a seasoned professional capable of harnessing complex data, unveiling insights, and weaving stories that drive strategic decision-making in our Agro-Business, Energy, and Property clusters."
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="267dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/backgroundsalaire" />
-
-    <ImageView
-        android:id="@+id/imageView21"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bag_1duree" />
+        app:layout_constraintTop_toBottomOf="@id/textView14" />
 
     <ImageView
         android:id="@+id/imageView22"
-        android:layout_width="26dp"
-        android:layout_height="27dp"
-        android:layout_marginTop="270dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.095"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/backgroundsalaire"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView15"
         app:srcCompat="@drawable/coins_2salaire" />
-
-    <ImageView
-        android:id="@+id/imageView23"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="434dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/location_pincity" />
 
     <TextView
         android:id="@+id/textView16"
-        android:layout_width="174dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="98dp"
-        android:layout_marginTop="273dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="Salary"
+        android:text="2700$"
         android:textColor="#00B0FF"
         android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@id/imageView22"
+        app:layout_constraintTop_toBottomOf="@id/textView15" />
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="33dp"
+        android:background="@drawable/backgroundsalaire"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/imageView22"
+        app:srcCompat="@drawable/bag_1duree" />
+
+    <TextView
+        android:id="@+id/textView162"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="3 years"
+        android:textColor="#00B0FF"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@id/imageView21"
+        app:layout_constraintTop_toBottomOf="@id/textView16" />
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="33dp"
+        android:background="@drawable/backgroundsalaire"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView21"
+        app:srcCompat="@drawable/location_pincity" />
+
+    <TextView
+        android:id="@+id/textView160"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Toulouse"
+        android:textColor="#00B0FF"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@id/imageView23"
+        app:layout_constraintTop_toBottomOf="@id/textView162" />
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="384dp"
+        android:layout_height="145dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView160" />
+
+    <Button
+        android:id="@+id/save_Offer"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#6E00B0FF"
+        android:text="Save Offer"
+        app:layout_constraintEnd_toStartOf="@+id/apply"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mapView" />
+
+    <Button
+        android:id="@+id/apply"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="#6E00B0FF"
+        android:text="Apply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/save_Offer"
+        app:layout_constraintTop_toBottomOf="@id/mapView" />
 
     <include
         android:id="@+id/bottom_inscription"

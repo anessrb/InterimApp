@@ -6,42 +6,31 @@
     android:background="@drawable/home_bg">
 
     <TextView
-        android:id="@+id/titre_tv"
+        android:id="@+id/savedOffers_tv"
         android:layout_width="220sp"
         android:layout_height="45sp"
-        android:layout_marginTop="48dp"
-        android:gravity="center"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="84dp"
         android:layout_marginLeft="84dp"
+        android:layout_marginTop="48dp"
         android:fontFamily="@font/poppins_semibold"
+        android:gravity="center"
         android:paddingLeft="3sp"
-        android:text="Applications"
+        android:text="Saved Offers"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/filterSpinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="99dp"
-        android:layout_marginEnd="31dp"
-        android:layout_marginRight="32dp"
-        android:entries="@array/application_status"
-        android:spinnerMode="dropdown" />
-
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_applications"
+        android:id="@+id/rv_savedOffers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="125dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginEnd="60dp"/>
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="125dp" />
 
     <include layout="@layout/bottominscri" />
-
 </RelativeLayout>
